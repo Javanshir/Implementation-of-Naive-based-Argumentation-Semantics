@@ -172,6 +172,11 @@ public class Main {
 			findStage(A, R);
 			break;
 		case 3:
+            if (labellings) {
+                System.out.println("cf2 labellings:");
+            } else {
+                System.out.println("cf2 extensions:");
+            }
 			stage2(A, R, Lin, Lout, Lout_delta, Lundecided, naive);
 			break;
 		default:
@@ -709,11 +714,9 @@ public class Main {
 			// log2("=======================");
 			if (show_results) {
 				if(labellings){
-					System.out.println("stage2 labellings:");
 					log2("{ " + Lin + ", " + Lout + ", " + Lout_delta + ", "
 							+ Lundecided + " };");
 				}else{
-					System.out.println("stage2 extensions:");
 					log2(Lin);
 				}
 			}
